@@ -1,0 +1,22 @@
+name: Check PR (Feature -> Dev)
+
+on:
+  pull_request:
+    # This runs the check when a PR is opened against 'development'
+    branches: [ "development" ]
+
+jobs:
+  syntax_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Verilator (Syntax Checker)
+        run: sudo apt-get install -y verilator
+
+      - name: Run Syntax Check
+        run: |
+          # The same strict syntax check
+          verilator --lint-only -Wall --cc *.sv
+          echo "Syntax Check Complete"
