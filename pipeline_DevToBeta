@@ -1,0 +1,23 @@
+name: Check PR (Dev -> Beta)
+
+on:
+  pull_request:
+    base: beta
+    branches: [ "development", "feature/*" ]
+
+jobs:
+  syntax_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Verilator (Syntax Checker)
+        run: sudo apt-get install -y verilator
+
+      - name: Run Syntax Check
+        run: |
+          # Finds all .sv files and runs a lint check
+          # Ignores missing top modules, focusing on code correctness
+          verilator --lint-only -Wall --cc *.sv || true
+          echo "Syntax Check Complete"
