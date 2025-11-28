@@ -6,17 +6,25 @@ on:
     branches: [ "development" ]
 
 jobs:
-  syntax_check:
+  verification:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install Verilator (Syntax Checker)
-        run: sudo apt-get install -y verilator
-
-      - name: Run Syntax Check
+      - name: Install Tools
         run: |
-          # The same strict syntax check
-          verilator --lint-only -Wall --cc *.sv
-          echo "Syntax Check Complete"
+          sudo apt-get update
+          sudo apt-get install -y verilator iverilog
+
+      - name: Syntax Check (Lint)
+        run: verilator --lint-only -Wall --cc *.sv
+
+      - name: Run Testbench (Simulation)
+        run: |
+          # 1. Compile all .sv files into a simulation executable named 'sim.out'
+          #    -g2012 enables SystemVerilog support
+          iverilog -g2012 -o sim.out *.sv
+
+          # 2. Run the simulation
+          vvp sim.out
