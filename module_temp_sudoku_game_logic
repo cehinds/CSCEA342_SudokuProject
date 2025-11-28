@@ -1,0 +1,81 @@
+module sudoku_engine(
+    input  logic       clk,
+    input  logic       reset,
+    // Inputs from Keyboard Parser
+    input  logic [3:0] cmd_number,
+    input  logic       cmd_up,
+    input  logic       cmd_down,
+    input  logic       cmd_left,
+    input  logic       cmd_right,
+    input  logic       cmd_enter,
+    
+    input  logic       cmd_valid,
+    // Debug / Visuals
+    output logic [3:0] current_x,
+    output logic [3:0] current_y,
+    output logic [3:0] current_val, // Value at cursor
+    output logic       game_won,
+    output logic       game_lost
+);
+
+    // The Grid: 9 rows, 9 columns, 4 bits per cell
+    logic [3:0] grid [0:8][0:8];
+    
+    // Solution ROM (Hardcoded for MVP, user can expand to load from file later)
+    logic [3:0] solution [0:8][0:8];
+    
+    // Fixed Map (1 = Preset/Immutable, 0 = User Editable)
+    logic fixed_mask [0:8][0:8];
+
+    // Initialize a simple dummy puzzle for testing
+    initial begin
+        // Example: clear everything
+        for(int i=0; i<9; i++) begin
+            for(int j=0; j<9; j++) begin
+                grid[i][j] = 0;
+                solution[i][j] = 1; // Dummy solution: All 1s
+                fixed_mask[i][j] = 0; 
+            end
+        end
+        // Set one fixed cell for test
+        grid[0][0] = 5; fixed_mask[0][0] = 1; solution[0][0] = 5;
+    end
+
+    // Cursor Logic
+    always_ff @(posedge clk) begin
+        if (reset) begin
+            current_x <= 0;
+            current_y <= 0;
+            game_won  <= 0;
+            game_lost <= 0;
+        end else if (cmd_valid) begin
+             // Number Entry (Only if not fixed)
+            if (cmd_number != 0 && fixed_mask[current_x][current_y] == 0) 
+            begin
+                grid[current_x][current_y] <= cmd_number;
+            end
+
+            if (cmd_up)    current_y <= (current_y == 0) ? 8 : current_y - 1;
+            if (cmd_down)  current_y <= (current_y == 8) ? 0 : current_y + 1;
+            if (cmd_left)  current_x <= (current_x == 0) ? 8 : current_x - 1;
+            if (cmd_right) current_x <= (current_x == 8) ? 0 : current_x + 1;          
+            // Validation
+            if (cmd_enter) begin
+                // Simple validation loop (logic is conceptual here, usually takes multiple cycles in HW)
+                // For single cycle check, we assume 81 comparators (expensive but fast)
+                game_won <= 1; // Assume win until proven false
+                for(int i=0; i<9; i++) begin
+                    for(int j=0; j<9; j++) begin
+                        if (grid[i][j] != solution[i][j]) begin
+                            game_won <= 0;
+                            game_lost <= 1;
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    assign current_val = grid[current_x][current_y];
+
+endmodule
