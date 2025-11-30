@@ -1,0 +1,82 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sat Nov 29 20:35:21 2025
+# Process ID         : 32800
+# Current directory  : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.runs/synth_1
+# Command line       : vivado.exe -log sudoku_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sudoku_top.tcl
+# Log file           : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.runs/synth_1/sudoku_top.vds
+# Journal file       : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-9AHCOEV
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+# CPU Frequency      : 4008 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 34184 MB
+# Swap memory        : 15779 MB
+# Total Virtual      : 49963 MB
+# Available Virtual  : 6333 MB
+#-----------------------------------------------------------
+source sudoku_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 495.699 ; gain = 214.137
+Command: read_checkpoint -auto_incremental -incremental C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/utils_1/imports/synth_1/testbench.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/utils_1/imports/synth_1/testbench.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top sudoku_top -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22992
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1181.488 ; gain = 494.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'sudoku_top' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/new/sudoku_top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'ps2_host' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_ps2_host.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_host' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_ps2_host.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'keyboard_parser' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_keyboard_parser.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'keyboard_parser' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_keyboard_parser.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sudoku_engine' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_temp_SudokuEngine.sv:1]
+INFO: [Synth 8-3876] $readmem data file 'puzzles.mem' is read successfully [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_temp_SudokuEngine.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'sudoku_engine' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_temp_SudokuEngine.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_display' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/new/sudoku_top.sv:109]
+INFO: [Synth 8-226] default block is never used [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/new/sudoku_top.sv:138]
+INFO: [Synth 8-226] default block is never used [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/new/sudoku_top.sv:159]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_display' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/new/sudoku_top.sv:109]
+INFO: [Synth 8-6155] done synthesizing module 'sudoku_top' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sources_1/new/sudoku_top.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1336.062 ; gain = 648.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1336.062 ; gain = 648.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1336.062 ; gain = 648.730
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1336.062 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/constrs_1/imports/CSCEA342_SudokuProject/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/constrs_1/imports/CSCEA342_SudokuProject/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/constrs_1/imports/CSCEA342_SudokuProject/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sudoku_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sudoku_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1415.191 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1415.191 ; gain = 0.000
