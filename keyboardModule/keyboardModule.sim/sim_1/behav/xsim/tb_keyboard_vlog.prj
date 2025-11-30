@@ -2,8 +2,7 @@
 sv xil_defaultlib  --include "H:/Constantine/Work/School/2025.1/Vivado/data/rsb/busdef" \
 "../../../../keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_keyboard_parser.sv" \
 "../../../../keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_ps2_host.sv" \
-"../../../../keyboardModule.srcs/sources_1/imports/CSCEA342_SudokuProject/module_temp_SudokuEngine.sv" \
-"../../../../keyboardModule.srcs/sources_1/new/sudoku_top.sv" \
+"../../../../keyboardModule.srcs/sim_1/imports/tests/tb_keyboard.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

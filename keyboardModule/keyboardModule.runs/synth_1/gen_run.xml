@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764480916" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/testbench.dcp">
-  <File Type="PA-TCL" Name="sudoku_top.tcl"/>
   <File Type="REPORTS-TCL" Name="sudoku_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="sudoku_top.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="sudoku_top_drc_synth.rpt"/>
   <File Type="RDS-UTIL" Name="sudoku_top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="sudoku_top_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="sudoku_top.tcl"/>
+  <File Type="RDS-RDS" Name="sudoku_top.vds"/>
   <File Type="RDS-DCP" Name="sudoku_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="sudoku_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="sudoku_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/module_keyboard_parser.sv">
@@ -88,9 +85,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
