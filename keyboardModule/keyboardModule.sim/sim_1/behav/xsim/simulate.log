@@ -1,0 +1,14 @@
+Time resolution is 1 ps
+WARNING: Data truncated while reading Datafile: puzzles.mem, while loading at index: 0
+WARNING: Data truncated while reading Datafile: puzzles.mem, while loading at index: 1
+WARNING: Data truncated while reading Datafile: puzzles.mem, while loading at index: 2
+Loading Sudoku test vectors...
+Waiting for Engine Ready...
+Engine Ready! Starting Tests.
+Test  0 PASS: Type=2 Val= 0 | Grid[ 0][ 1] ==  6
+Test  1 FAIL: Type=4 | Grid[ 1][ 1] is  7 (Expected  0)
+Test  2 FAIL: Type=5 | Grid[ 1][ 1] is  7 (Expected  5)
+Test  3 PASS: Type=2 Val= 0 | Grid[ 1][ 2] ==  9
+Test  4 FAIL: Type=1 | Grid[ 1][ 1] is  7 (Expected  5)
+FINISHED WITH           3 ERRORS
+$stop called at time : 1815 ns : File "C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/keyboardModule/keyboardModule.srcs/sim_1/imports/tests/tb_sudoku.sv" Line 124

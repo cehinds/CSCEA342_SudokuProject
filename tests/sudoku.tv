@@ -1,0 +1,7 @@
+// Start at 0,0. Val is 5.
+2_0_03 // Move Down. Expect current_val to be 3 (from puzzle ROM)
+4_0_00 // Move Right. Expect current_val to be 0 (Empty)
+5_5_05 // Enter '5'. Expect current_val to be 5.
+2_0_00 // Move Down. Expect 0.
+1_0_05 // Move Up. Expect 5 (The value we just wrote).
+F_F_FF // End Marker

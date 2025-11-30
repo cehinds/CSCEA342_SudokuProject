@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Oct 24 09:31:54 2024
+# Process ID: 2268
+# Current directory: C:/Users/sjneumayer/Desktop/22_ps2_keyboard/keyboard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12604 C:\Users\sjneumayer\Desktop\22_ps2_keyboard\keyboard\keyboard.xpr
+# Log file: C:/Users/sjneumayer/Desktop/22_ps2_keyboard/keyboard/vivado.log
+# Journal file: C:/Users/sjneumayer/Desktop/22_ps2_keyboard/keyboard\vivado.jou
+# Running On: ANC-BRLKKQ3, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 16, Host memory: 34033 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/sjneumayer/Desktop/22_ps2_keyboard/keyboard/keyboard.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/sjneumayer/Desktop/22_ps2_keyboard/keyboard/keyboard.runs/impl_1/keyboard_to_seven_seg.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/sjneumayer/Desktop/22_ps2_keyboard/keyboard/keyboard.runs/impl_1/keyboard_to_seven_seg.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
