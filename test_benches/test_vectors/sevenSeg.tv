@@ -1,0 +1,10 @@
+// Store(1) Up(1) Down(1) SW(16_Hex) _ LED(4)
+// Note: Conditioners take time to settle. This TB assumes 
+// we either bypassed the conditioner or wait long enough. 
+// For simulation, it is often easier to force the internal "conditioned" signals 
+// or reduce the conditioner constant to 1.
+0 0 0 0000_0000
+0 1 0 0000_0001  // Up pressed -> LED 1
+0 0 0 0000_0001  // Release -> LED 1
+0 1 0 0000_0010  // Up pressed -> LED 2
+...

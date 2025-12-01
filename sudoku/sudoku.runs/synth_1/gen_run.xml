@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764568846">
+  <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/button_controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/button_controller.sv"/>
+        <Attr Name="ImportTime" Val="1764567526"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../top/clock_divider.sv"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/conditioner.sv"/>
+        <Attr Name="ImportTime" Val="1764567644"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_front.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/digit_front.sv"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/display_controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/display_controller.sv"/>
+        <Attr Name="ImportTime" Val="1764567288"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/keyboard_parser.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/keyboard_parser.sv"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/ps2_host.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/ps2_host.sv"/>
+        <Attr Name="ImportTime" Val="1764565115"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../game_logic_storage/ram.sv"/>
+        <Attr Name="ImportTime" Val="1764567030"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/sevenseg.sv"/>
+        <Attr Name="ImportTime" Val="1764567773"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/sudoku_draw.sv"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../game_logic_storage/sudoku_engine.sv"/>
+        <Attr Name="ImportTime" Val="1764567096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_games.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../game_logic_storage/sudoku_games.sv"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/vga_controller.sv"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/top/top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../top/top.sv"/>
+        <Attr Name="ImportTime" Val="1764567465"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/test_benches/tb_conditioner.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test_benches/tb_conditioner.sv"/>
+        <Attr Name="ImportTime" Val="1764568003"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/test_benches/tb_input_testbench.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test_benches/tb_input_testbench.sv"/>
+        <Attr Name="ImportTime" Val="1764564944"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/test_benches/tb_sevenSegmentRamAssignment.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test_benches/tb_sevenSegmentRamAssignment.sv"/>
+        <Attr Name="ImportTime" Val="1764567890"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/test_benches/tb_system_testbench.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test_benches/tb_system_testbench.sv"/>
+        <Attr Name="ImportTime" Val="1764564965"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/test_benches/puzzles.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../test_benches/puzzles.mem"/>
+        <Attr Name="ImportTime" Val="1764564636"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraint/Basys3_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../constraint/Basys3_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1764565376"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
