@@ -77,10 +77,16 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/puzzle_rom.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sevenseg_sudoku.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/visual_output/sevenseg_sudoku.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/shadow_register.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sudoku_checker.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sudoku_gameplay.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sudoku_loader.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/top.sv
 }
