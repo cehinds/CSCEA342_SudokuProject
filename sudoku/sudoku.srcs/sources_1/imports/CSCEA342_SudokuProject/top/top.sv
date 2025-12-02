@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: UAA Digital Circuits A342
-// Engineers: Gwendolyn Beecher, Constantine Hindes
+// Engineers: Gwendolyn Beecher, Constantine Hinds
 //
 // Module: top.sv
 // Design: VGA Sudoku Game (Button-only control, conditioner-based, mode-aware cursor)
@@ -24,7 +24,11 @@ module top(
     output logic Vsync,
     output logic [3:0] vgaRed,
     output logic [3:0] vgaGreen,
-    output logic [3:0] vgaBlue
+    output logic [3:0] vgaBlue,
+    
+    // Seven Segment Display
+    output logic [6:0] seg,    // Cathode segments
+    output logic [3:0] an      // Anode enables
 );
 
     logic reset = 1'b0;
@@ -179,5 +183,18 @@ module top(
     assign vgaRed   = video_on ? r : 4'b0000;
     assign vgaGreen = video_on ? g : 4'b0000;
     assign vgaBlue  = video_on ? b : 4'b0000;
+
+    // Seven Segment Display for Sudoku
+    sevenseg_sudoku SEVENSEG(
+        .clk(clk),
+        .engine_x(engine_x),
+        .engine_y(engine_y),
+        .engine_val(engine_val),
+        .selected_number(selected_number),
+        .mode(mode),
+        .fixed_mask(fixed_mask_out),
+        .Anode_Activate(an),
+        .LED_out(seg)
+    );
 
 endmodule

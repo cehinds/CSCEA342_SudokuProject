@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Mon Dec  1 20:21:52 2025
-# Process ID         : 81204
+# Start of session at: Mon Dec  1 21:26:26 2025
+# Process ID         : 28384
 # Current directory  : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1
 # Command line       : vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file           : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1/top.vds
@@ -19,10 +19,10 @@
 # Host memory        : 34184 MB
 # Swap memory        : 8097 MB
 # Total Virtual      : 42281 MB
-# Available Virtual  : 22720 MB
+# Available Virtual  : 20974 MB
 #-----------------------------------------------------------
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 494.145 ; gain = 214.102
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 493.078 ; gain = 210.129
 Command: read_checkpoint -auto_incremental -incremental C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/utils_1/imports/synth_1/top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -35,9 +35,9 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32800
+INFO: [Synth 8-7075] Helper process launched with PID 106260
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1177.766 ; gain = 492.840
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1178.648 ; gain = 494.277
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10180] variable 'rel_x' must explicitly be declared as automatic or static [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv:94]
 WARNING: [Synth 8-10180] variable 'rel_y' must explicitly be declared as automatic or static [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv:95]
@@ -63,6 +63,10 @@ INFO: [Synth 8-6157] synthesizing module 'sudoku_draw' [C:/Users/suprbludude/Dow
 INFO: [Synth 8-6157] synthesizing module 'digit_font' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'digit_font' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv:12]
 INFO: [Synth 8-6155] done synthesizing module 'sudoku_draw' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg_sudoku' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sevenseg_sudoku.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'sevenseg' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv:8]
+INFO: [Synth 8-6155] done synthesizing module 'sevenseg_sudoku' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sevenseg_sudoku.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/top.sv:10]
 WARNING: [Synth 8-3848] Net puzzle_rom in module/entity sudoku_engine does not have driver. [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv:39]
 WARNING: [Synth 8-87] always_comb on 'digit_value_reg' did not result in combinational logic [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv:65]
@@ -83,18 +87,18 @@ WARNING: [Synth 8-7129] Port sw[5] in module top is either unconnected or has no
 WARNING: [Synth 8-7129] Port sw[4] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[3] in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.664 ; gain = 648.738
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1336.047 ; gain = 651.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.664 ; gain = 648.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1336.047 ; gain = 651.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1333.664 ; gain = 648.738
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1336.047 ; gain = 651.676
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1333.664 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1336.047 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -105,28 +109,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1386.078 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1409.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1386.078 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1409.250 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1386.078 ; gain = 701.152
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.250 ; gain = 724.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1386.078 ; gain = 701.152
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.250 ; gain = 724.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1386.078 ; gain = 701.152
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1409.250 ; gain = 724.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sudoku_engine'
 ---------------------------------------------------------------------------------------------------
@@ -141,7 +145,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'digit_value_reg' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv:65]
 WARNING: [Synth 8-327] inferring latch for variable 'font_row_reg' [C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv:66]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1386.078 ; gain = 701.152
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1409.250 ; gain = 724.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -152,7 +156,7 @@ Detailed RTL Component Info :
 	   3 Input   32 Bit       Adders := 2     
 	   2 Input   10 Bit       Adders := 2     
 	   2 Input    7 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 7     
+	   2 Input    4 Bit       Adders := 9     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
 	               10 Bit    Registers := 2     
@@ -168,8 +172,8 @@ Detailed RTL Component Info :
 	  13 Input    8 Bit        Muxes := 5     
 	   4 Input    7 Bit        Muxes := 1     
 	  13 Input    6 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 16    
-	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 20    
+	   4 Input    4 Bit        Muxes := 4     
 	   7 Input    4 Bit        Muxes := 3     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 269   
@@ -206,25 +210,25 @@ WARNING: [Synth 8-7129] Port sw[5] in module top is either unconnected or has no
 WARNING: [Synth 8-7129] Port sw[4] in module top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sw[3] in module top is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1521.520 ; gain = 836.594
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1536.027 ; gain = 851.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1527.340 ; gain = 842.414
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1536.027 ; gain = 851.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1561.473 ; gain = 876.547
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:53 . Memory (MB): peak = 1621.969 ; gain = 937.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1601.293 ; gain = 916.367
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1643.746 ; gain = 959.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -242,37 +246,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -289,45 +293,45 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   435|
-|3     |LUT1   |    36|
-|4     |LUT2   |   501|
-|5     |LUT3   |   546|
-|6     |LUT4   |   477|
-|7     |LUT5   |   688|
-|8     |LUT6   |   838|
-|9     |MUXF7  |    16|
-|10    |MUXF8  |     5|
-|11    |FDRE   |   207|
+|2     |CARRY4 |   448|
+|3     |LUT1   |    43|
+|4     |LUT2   |   458|
+|5     |LUT3   |   541|
+|6     |LUT4   |   498|
+|7     |LUT5   |   765|
+|8     |LUT6   |   919|
+|9     |MUXF7  |    44|
+|10    |MUXF8  |     6|
+|11    |FDRE   |   254|
 |12    |FDSE   |   324|
 |13    |LD     |     8|
 |14    |IBUF   |     6|
-|15    |OBUF   |    14|
+|15    |OBUF   |    25|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:01 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 18 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 1771.484 ; gain = 1034.145
-Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1771.484 ; gain = 1086.559
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 1801.387 ; gain = 1043.812
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1801.387 ; gain = 1117.016
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1780.676 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 464 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1810.590 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 506 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1784.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1814.227 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   LD => LDCE: 8 instances
 
-Synth Design complete | Checksum: 52c63ba9
+Synth Design complete | Checksum: 4b9fdff5
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 46 Warnings, 1 Critical Warnings and 0 Errors encountered.
+41 Infos, 46 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 1784.348 ; gain = 1285.145
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:09 . Memory (MB): peak = 1814.227 ; gain = 1313.805
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1784.348 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1814.227 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1/top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  1 20:23:12 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  1 21:27:49 2025...

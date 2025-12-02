@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "H:/Constantine/Work/School/2025.1/Vivado/data/rsb/busdef" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv" \
+"../../../../sudoku.srcs/sources_1/new/sevenseg_sudoku.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv" \
+"../../../../sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
