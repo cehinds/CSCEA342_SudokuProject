@@ -47,19 +47,27 @@ module sevenseg(
     end
     
     // Cathode patterns of the 7-segment LED display 
+    // seg[6:0] = {G, F, E, D, C, B, A} - active LOW (0 = ON)
+    //
+    //     AAA
+    //    F   B
+    //     GGG
+    //    E   C
+    //     DDD
+    //
     always_comb begin
         case(LED_BCD)
-            4'h0: LED_out = 7'b0000001; // "0"     
-            4'h1: LED_out = 7'b1001111; // "1" 
-            4'h2: LED_out = 7'b0010010; // "2" 
-            4'h3: LED_out = 7'b0000110; // "3" 
-            4'h4: LED_out = 7'b1001100; // "4" 
-            4'h5: LED_out = 7'b0100100; // "5" 
-            4'h6: LED_out = 7'b0100000; // "6" 
-            4'h7: LED_out = 7'b0001111; // "7" 
-            4'h8: LED_out = 7'b0000000; // "8"     
-            4'h9: LED_out = 7'b0000100; // "9"
-            4'hE: LED_out = 7'b0110000; // "E"
+            4'h0: LED_out = 7'b1000000; // "0" - segments A,B,C,D,E,F on
+            4'h1: LED_out = 7'b1111001; // "1" - segments B,C on
+            4'h2: LED_out = 7'b0100100; // "2" - segments A,B,D,E,G on
+            4'h3: LED_out = 7'b0110000; // "3" - segments A,B,C,D,G on
+            4'h4: LED_out = 7'b0011001; // "4" - segments B,C,F,G on
+            4'h5: LED_out = 7'b0010010; // "5" - segments A,C,D,F,G on
+            4'h6: LED_out = 7'b0000010; // "6" - segments A,C,D,E,F,G on
+            4'h7: LED_out = 7'b1111000; // "7" - segments A,B,C on
+            4'h8: LED_out = 7'b0000000; // "8" - all segments on
+            4'h9: LED_out = 7'b0010000; // "9" - segments A,B,C,D,F,G on
+            4'hE: LED_out = 7'b0000110; // "E" - segments A,D,E,F,G on
             4'hF: LED_out = 7'b1111111; // Blank (all segments off)
             default: LED_out = 7'b1111111; // Blank
         endcase

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: UAA Digital Circuits A342
-// Engineer: Gwendolyn Beecher, Constantine Hindes
+// Engineer: Gwendolyn Beecher, Constantine Hinds
 // 
 // Module: sevenseg_sudoku
 // Description: Seven segment display controller for Sudoku game
@@ -33,11 +33,11 @@ module sevenseg_sudoku(
     logic [3:0] digit_0, digit_1, digit_2, digit_3;
     
     always_comb begin
-        // Digit 0 (leftmost): Y position + 1 (1-9 instead of 0-8)
-        digit_0 = engine_y + 4'd1;
+        // Digit 0 (leftmost): X position (0-8)
+        digit_0 = engine_x;
         
-        // Digit 1: X position + 1 (1-9 instead of 0-8)
-        digit_1 = engine_x + 4'd1;
+        // Digit 1: Y position (0-8)
+        digit_1 = engine_y;
         
         // Digit 2: 'E' if in NUMBER mode and cell is editable, else blank
         if (mode == 1'b1 && cell_is_editable)
