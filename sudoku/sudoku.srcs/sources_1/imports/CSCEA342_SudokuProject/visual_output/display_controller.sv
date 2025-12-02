@@ -6,7 +6,8 @@ module display_controller(
     input  logic [3:0] current_val, // Value at Cursor
     
     output logic [6:0] seg,         // Cathodes
-    output logic [3:0] an           // Anodes (Active Low)
+    output logic [3:0] an,          // Anodes (Active Low)
+    output logic       dp           // Decimal Point (added)
 );
 
     // Format the 16-bit number to display:
@@ -16,6 +17,9 @@ module display_controller(
     // Digit 0 (Right): Current Value
     logic [15:0] displayed_number;
     assign displayed_number = {current_y, current_x, 4'b0000, current_val};
+
+    // Turn off decimal point
+    assign dp = 1'b1;  // Active low, so 1 = off
 
     // Instantiate the provided 7-segment driver
     sevenseg SEG_DRIVER (

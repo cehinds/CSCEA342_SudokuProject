@@ -1,0 +1,173 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Mon Dec  1 19:33:50 2025
+| Host         : DESKTOP-9AHCOEV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35ti
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    95 |
+|    Minimum number of control sets                        |    95 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   372 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    95 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |    84 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     4 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             118 |           47 |
+| No           | No                    | Yes                    |              10 |            4 |
+| No           | Yes                   | No                     |              17 |            8 |
+| Yes          | No                    | No                     |             340 |          130 |
+| Yes          | No                    | Yes                    |              10 |            4 |
+| Yes          | Yes                   | No                     |              69 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |              Enable Signal              |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][4][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][6][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][8][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][5][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][4][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][7][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/cur_x0__0                        | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/cur_y0__0                        | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][0][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][7][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][1][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][2][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][5][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][2][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][3][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][6][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][6][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][1][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][3][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][8][3]_i_1_n_0     |                                              |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][0][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][1][3]_i_1_n_0     |                                              |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | KBD_HOST/ps2_clk_negedge                | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][2][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][3][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][4][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][7][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][1][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][4][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][3][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][5][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][5][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][1][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][8][3]_i_1_n_0     |                                              |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][2][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[0][8][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][5][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[1][6][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][6][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][4][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][8][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[2][7][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[3][7][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][1][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][6][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][7][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][3][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][3][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][8][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][2][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][5][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][7][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][1][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][2][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][3][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][8][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][6][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][1][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][4][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][2][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][5][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][2][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][6][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][3][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][4][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][4][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][7][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][5][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][6][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][8][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][7][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[6][0][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][5][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[5][1][3]_i_1_n_0     |                                              |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][2][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[4][8][3]_i_1_n_0     |                                              |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[7][4][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | ENGINE/grid_shadow[8][3][3]_i_1_n_0     |                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG |                                         | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | ENGINE/check_counter[6]_i_1_n_0         |                                              |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG | ENGINE/init_counter                     | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                6 |              7 |         1.17 |
+|  clk_IBUF_BUFG | KBD_HOST/rx_data[7]_i_1_n_0             | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                2 |              8 |         4.00 |
+|  DIV/Q[0]      | VGA/v_count_1                           | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG |                                         | BTN_RST/DEBOUNCER/SR[0]                      |                5 |             10 |         2.00 |
+|  DIV/Q[0]      |                                         | BTN_RST/DEBOUNCER/conditionedSignal_reg_1[0] |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG | KBD_HOST/shift_reg_0                    |                                              |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | BTN_RST/DEBOUNCER/counter[0]_i_2_n_0    | BTN_RST/DEBOUNCER/counter[0]_i_1_n_0         |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG | BTN_PUZ/DEBOUNCER/counter[0]_i_2__0_n_0 | BTN_PUZ/DEBOUNCER/counter[0]_i_1__0_n_0      |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG |                                         |                                              |               47 |            118 |         2.51 |
++----------------+-----------------------------------------+----------------------------------------------+------------------+----------------+--------------+
+
+

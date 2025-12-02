@@ -7,6 +7,7 @@
 // Design Name: VGA Sudoku Game
 // Module Name: digit_font
 // Project Name: VGA Sudoku
+// NOTE: File should be named digit_font.sv (not digit_front.sv)
 //////////////////////////////////////////////////////////////////////////////////
 
 module digit_font (
