@@ -1,7 +1,0 @@
-Running: xsim.dir/sudoku_top_behav/xsimk.exe -simmode gui -wdb sudoku_top_behav.wdb -simrunnum 0 -socket 60338
-Design successfully loaded
-Design Loading Memory Usage: 7808 KB (Peak: 7808 KB)
-Design Loading CPU Usage: 46 ms
-Simulation completed
-Simulation Memory Usage: 8820 KB (Peak: 8820 KB)
-Simulation CPU Usage: 109 ms
