@@ -254,7 +254,7 @@ module sudoku_engine(
     always_ff @(posedge clk) begin
         if (reset) begin
             state        <= S_LOADING;
-            loader_start <= 1'b1;  // Start loading on reset
+            loader_start <= 1'b0;
             checker_start <= 1'b0;
         end else begin
             loader_start  <= 1'b0;  // Default: no start pulse
@@ -262,6 +262,7 @@ module sudoku_engine(
             
             case (state)
                 S_LOADING: begin
+                    // Wait for loader to finish (loader auto-starts)
                     if (loader_done) begin
                         state <= S_PLAY;
                     end

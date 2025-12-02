@@ -47,8 +47,8 @@ module sudoku_loader(
         S_DONE
     } state_t;
     
-    state_t state;
-    logic [6:0] counter;
+    state_t state = S_LOAD_INIT;  // Initialize to loading state
+    logic [6:0] counter = 7'd0;
 
     // Puzzle ROM interface
     logic [3:0] nibble_init;
@@ -67,7 +67,7 @@ module sudoku_loader(
     // State machine
     always_ff @(posedge clk) begin
         if (reset) begin
-            state     <= S_IDLE;
+            state     <= S_LOAD_INIT;  // Start loading immediately
             counter   <= 7'd0;
             load_done <= 1'b0;
         end else begin
@@ -103,7 +103,7 @@ module sudoku_loader(
                     state <= S_IDLE;
                 end
 
-                default: state <= S_IDLE;
+                default: state <= S_LOAD_INIT;  // Default to loading
             endcase
         end
     end
