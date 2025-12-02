@@ -56,7 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
@@ -74,9 +73,8 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/debounce.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/one-pulse.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv

@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Dec  1 20:13:54 2025
+# Process ID         : 116208
+# Current directory  : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent112780 C:\Users\suprbludude\Downloads\CSCEA342_SudokuProject\sudoku\sudoku.xpr
+# Log file           : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/vivado.log
+# Journal file       : C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku\vivado.jou
+# Running On         : DESKTOP-9AHCOEV
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+# CPU Frequency      : 4008 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 34184 MB
+# Swap memory        : 8097 MB
+# Total Virtual      : 42281 MB
+# Available Virtual  : 24842 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+close_project

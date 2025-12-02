@@ -4,7 +4,7 @@
 // Engineers: Gwendolyn Beecher, Constantine Hindes
 //
 // Module: top.sv
-// Design: VGA Sudoku Game (Button-only control, debounced, mode-aware cursor)
+// Design: VGA Sudoku Game (Button-only control, conditioner-based, mode-aware cursor)
 //////////////////////////////////////////////////////////////////////////////////
 
 module top(
@@ -17,7 +17,7 @@ module top(
     input  logic btnL,
     input  logic btnR,
 
-    input  logic [15:0] sw,    // Basys3 switches (unused)
+    input  logic [15:0] sw,    // Basys3 switches
 
     // VGA
     output logic Hsync,
@@ -60,21 +60,15 @@ module top(
         else            puzzle_selector = 2'd0;
     end
 
-    // Debounce + One-Pulse
-    logic dbC, dbU, dbD, dbL, dbR;
+    // Conditioner for all buttons (replaces debounce + onepulse)
+    logic condC, condU, condD, condL, condR;
     logic btnC_edge, btnU_edge, btnD_edge, btnL_edge, btnR_edge;
 
-    debounce dC (.clk(clk), .btn_raw(btnC), .btn_clean(dbC));
-    debounce dU (.clk(clk), .btn_raw(btnU), .btn_clean(dbU));
-    debounce dD (.clk(clk), .btn_raw(btnD), .btn_clean(dbD));
-    debounce dL (.clk(clk), .btn_raw(btnL), .btn_clean(dbL));
-    debounce dR (.clk(clk), .btn_raw(btnR), .btn_clean(dbR));
-
-    onepulse pC (.clk(clk), .din(dbC), .pulse(btnC_edge));
-    onepulse pU (.clk(clk), .din(dbU), .pulse(btnU_edge));
-    onepulse pD (.clk(clk), .din(dbD), .pulse(btnD_edge));
-    onepulse pL (.clk(clk), .din(dbL), .pulse(btnL_edge));
-    onepulse pR (.clk(clk), .din(dbR), .pulse(btnR_edge));
+    conditioner cC (.clk(clk), .buttonPress(btnC), .conditionedSignal(condC), .pulse(btnC_edge));
+    conditioner cU (.clk(clk), .buttonPress(btnU), .conditionedSignal(condU), .pulse(btnU_edge));
+    conditioner cD (.clk(clk), .buttonPress(btnD), .conditionedSignal(condD), .pulse(btnD_edge));
+    conditioner cL (.clk(clk), .buttonPress(btnL), .conditionedSignal(condL), .pulse(btnL_edge));
+    conditioner cR (.clk(clk), .buttonPress(btnR), .conditionedSignal(condR), .pulse(btnR_edge));
 
     // Modes:
     //   MOVE mode   (cursor solid)
@@ -168,23 +162,22 @@ module top(
     // Drawing module
     logic [3:0] r, g, b;
 
-        sudoku_draw DRAW(
-            .x(x),
-            .y(y),
-            .grid_vals(grid_out),
-            .fixed_mask(fixed_mask_out),
-            .cursor_x(engine_x),
-            .cursor_y(engine_y),
-            .flash_state(flash_state_visible),
-            .preview_number( (mode == MODE_NUMBER) ? selected_number : 4'd0 ),
-            .red(r),
-            .green(g),
-            .blue(b)
-        );
+    sudoku_draw DRAW(
+        .x(x),
+        .y(y),
+        .grid_vals(grid_out),
+        .fixed_mask(fixed_mask_out),
+        .cursor_x(engine_x),
+        .cursor_y(engine_y),
+        .flash_state(flash_state_visible),
+        .preview_number( (mode == MODE_NUMBER) ? selected_number : 4'd0 ),
+        .red(r),
+        .green(g),
+        .blue(b)
+    );
         
     assign vgaRed   = video_on ? r : 4'b0000;
     assign vgaGreen = video_on ? g : 4'b0000;
     assign vgaBlue  = video_on ? b : 4'b0000;
 
 endmodule
-

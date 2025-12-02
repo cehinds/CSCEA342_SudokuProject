@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764651548">
+<GenRun Id="impl_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764652909">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="INIT-TIMING" Name="top_timing_summary_init.rpt"/>
@@ -122,10 +122,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/debounce.sv">
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/debounce.sv"/>
-        <Attr Name="ImportTime" Val="1764572702"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/conditioner.sv"/>
+        <Attr Name="ImportTime" Val="1764571244"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -135,15 +135,6 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/digit_font.sv"/>
         <Attr Name="ImportTime" Val="1764558994"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/one-pulse.sv">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/one-pulse.sv"/>
-        <Attr Name="ImportTime" Val="1764572742"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -185,11 +176,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv">
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/debounce.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/conditioner.sv"/>
-        <Attr Name="ImportTime" Val="1764571244"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/debounce.sv"/>
+        <Attr Name="ImportTime" Val="1764572702"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/one-pulse.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/one-pulse.sv"/>
+        <Attr Name="ImportTime" Val="1764572742"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -260,9 +261,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Mon Dec  1 20:01:58 2025
+| Date             : Mon Dec  1 20:24:53 2025
 | Host             : DESKTOP-9AHCOEV running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.011 |     4107 |       --- |             --- |
-|   LUT as Logic |     0.010 |     2305 |     20800 |           11.08 |
+| Slice Logic    |     0.011 |     4096 |       --- |             --- |
+|   LUT as Logic |     0.010 |     2303 |     20800 |           11.07 |
 |   CARRY4       |    <0.001 |      435 |      8150 |            5.34 |
-|   Register     |    <0.001 |      534 |     41600 |            1.28 |
+|   Register     |    <0.001 |      539 |     41600 |            1.30 |
 |   F7/F8 Muxes  |    <0.001 |       21 |     32600 |            0.06 |
-|   Others       |     0.000 |       32 |       --- |             --- |
-| Signals        |     0.009 |     3378 |       --- |             --- |
+|   Others       |     0.000 |       22 |       --- |             --- |
+| Signals        |     0.010 |     3378 |       --- |             --- |
 | I/O            |    <0.001 |       20 |       106 |           18.87 |
 | Static Power   |     0.062 |          |           |                 |
 | Total          |     0.085 |          |           |                 |
@@ -142,9 +142,9 @@ Table of Contents
 | Name     | Power (W) |
 +----------+-----------+
 | top      |     0.023 |
-|   DRAW   |     0.006 |
+|   DRAW   |     0.007 |
 |   ENGINE |     0.003 |
-|   VGA    |     0.012 |
+|   VGA    |     0.011 |
 +----------+-----------+
 
 
