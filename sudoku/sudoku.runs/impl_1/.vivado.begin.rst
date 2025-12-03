@@ -1,40 +1,15 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="26844" HostCore="8" HostMemory="034184105984">
+    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="89292" HostCore="8" HostMemory="034184105984">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="76336" HostCore="8" HostMemory="034184105984">
+    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="111896" HostCore="8" HostMemory="034184105984">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="95060" HostCore="8" HostMemory="034184105984">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="112624" HostCore="8" HostMemory="034184105984">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="77660" HostCore="8" HostMemory="034184105984">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="67744" HostCore="8" HostMemory="034184105984">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="38812" HostCore="8" HostMemory="034184105984">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="39920" HostCore="8" HostMemory="034184105984">
+    <Process Command="vivado.bat" Owner="family" Host="DESKTOP-9AHCOEV" Pid="63144" HostCore="8" HostMemory="034184105984">
     </Process>
 </ProcessHandle>

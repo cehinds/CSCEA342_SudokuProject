@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: UAA Digital Circuits A342
-// Engineers: Gwendolyn Beecher, Constantine Hinds
+// Engineers: Gwendolyn Beecher, Constantine Hinds 
 //
 // Module: top.sv
-// Design: VGA Sudoku Game (Button-only control, conditioner-based, mode-aware cursor)
+// Design: VGA Sudoku Game (Integrated version)
 //////////////////////////////////////////////////////////////////////////////////
 
 module top(
@@ -26,9 +26,9 @@ module top(
     output logic [3:0] vgaGreen,
     output logic [3:0] vgaBlue,
     
-    // Seven Segment Display
-    output logic [6:0] seg,    // Cathode segments
-    output logic [3:0] an      // Anode enables
+    // Seven Segment Display (Constantine)
+    output logic [6:0] seg,
+    output logic [3:0] an
 );
 
     logic reset = 1'b0;
@@ -54,17 +54,55 @@ module top(
         .video_on(video_on)
     );
 
-    // Puzzle selector
+    // ============================================================
+    // Switch synchronizers (Gwen's addition - stabilize SW0/SW1)
+    // ============================================================
+    logic sw0_sync, sw1_sync;
+
+    always_ff @(posedge clk) begin
+        sw0_sync <= sw[0];
+        sw1_sync <= sw[1];
+    end
+
+    // ============================================================
+    // Puzzle selector (Gwen's priority logic)
+    // ============================================================
     logic [1:0] puzzle_selector;
 
     always_comb begin
-        if      (sw[0]) puzzle_selector = 2'd0;
-        else if (sw[1]) puzzle_selector = 2'd1;
-        else if (sw[2]) puzzle_selector = 2'd2;
-        else            puzzle_selector = 2'd0;
+        if (sw1_sync)
+            puzzle_selector = 2'd2;
+        else if (sw0_sync)
+            puzzle_selector = 2'd1;
+        else
+            puzzle_selector = 2'd0;
     end
 
-    // Conditioner for all buttons (replaces debounce + onepulse)
+    // ============================================================
+    // Soft reset (Gwen's addition - reset when puzzle changes)
+    // ============================================================
+    logic [1:0] puzzle_sel_prev;
+    logic       soft_reset;
+
+    always_ff @(posedge clk) begin
+        if (reset) begin
+            puzzle_sel_prev <= 2'd0;
+            soft_reset      <= 1'b0;
+        end
+        else begin
+            if (puzzle_selector != puzzle_sel_prev) begin
+                soft_reset      <= 1'b1;
+                puzzle_sel_prev <= puzzle_selector;
+            end
+            else begin
+                soft_reset      <= 1'b0;
+            end
+        end
+    end
+
+    // ============================================================
+    // Button conditioners
+    // ============================================================
     logic condC, condU, condD, condL, condR;
     logic btnC_edge, btnU_edge, btnD_edge, btnL_edge, btnR_edge;
 
@@ -74,25 +112,23 @@ module top(
     conditioner cL (.clk(clk), .buttonPress(btnL), .conditionedSignal(condL), .pulse(btnL_edge));
     conditioner cR (.clk(clk), .buttonPress(btnR), .conditionedSignal(condR), .pulse(btnR_edge));
 
-    // Modes:
-    //   MOVE mode   (cursor solid)
-    //   NUMBER mode (cursor flashes, UP/DOWN cycles 1-9)
+    // ============================================================
+    // Mode logic (MOVE vs NUMBER)
+    // ============================================================
     typedef enum logic { MODE_MOVE = 1'b0, MODE_NUMBER = 1'b1 } mode_t;
     mode_t mode;
 
     logic [3:0] selected_number;
 
     always_ff @(posedge clk) begin
-        if (reset) begin
+        if (reset || soft_reset) begin
             mode <= MODE_MOVE;
             selected_number <= 4'd1;
         end
         else begin
-            // Toggle modes with CENTER button
             if (btnC_edge)
                 mode <= (mode == MODE_MOVE) ? MODE_NUMBER : MODE_MOVE;
 
-            // Cycle number while in number mode
             if (mode == MODE_NUMBER) begin
                 if (btnU_edge)
                     selected_number <= (selected_number == 9) ? 1 : selected_number + 1;
@@ -102,16 +138,21 @@ module top(
         end
     end
 
+    // ============================================================
     // Cursor flashing logic
+    // ============================================================
     logic [26:0] flash_div;
     always_ff @(posedge clk) flash_div <= flash_div + 1;
 
-    logic flash_state = flash_div[26]; // slow toggle
+    logic flash_state;
+    assign flash_state = flash_div[26];
 
-    logic flash_state_visible =
-        (mode == MODE_NUMBER) ? flash_state : 1'b1;
+    logic flash_state_visible;
+    assign flash_state_visible = (mode == MODE_NUMBER) ? flash_state : 1'b1;
 
+    // ============================================================
     // Command generation
+    // ============================================================
     logic cmd_up, cmd_down, cmd_left, cmd_right;
     logic [3:0] cmd_number;
     logic cmd_enter, cmd_valid;
@@ -134,7 +175,9 @@ module top(
 
     assign cmd_enter = btnC_edge;
 
-    // Sudoku engine
+    // ============================================================
+    // Sudoku engine (Constantine's)
+    // ============================================================
     logic [3:0] engine_x, engine_y;
     logic [3:0] engine_val;
     logic game_won, game_lost, engine_ready;
@@ -144,7 +187,7 @@ module top(
 
     sudoku_engine ENGINE(
         .clk(clk),
-        .reset(reset),
+        .reset(reset | soft_reset),
         .puzzle_selector(puzzle_selector),
         .cmd_number(cmd_number),
         .cmd_up(cmd_up),
@@ -163,7 +206,9 @@ module top(
         .fixed_mask_out(fixed_mask_out)
     );
 
-    // Drawing module
+    // ============================================================
+    // Drawing module (with Gwen's game selector UI)
+    // ============================================================
     logic [3:0] r, g, b;
 
     sudoku_draw DRAW(
@@ -175,6 +220,7 @@ module top(
         .cursor_y(engine_y),
         .flash_state(flash_state_visible),
         .preview_number( (mode == MODE_NUMBER) ? selected_number : 4'd0 ),
+        .puzzle_selector(puzzle_selector),
         .red(r),
         .green(g),
         .blue(b)
@@ -184,7 +230,9 @@ module top(
     assign vgaGreen = video_on ? g : 4'b0000;
     assign vgaBlue  = video_on ? b : 4'b0000;
 
-    // Seven Segment Display for Sudoku
+    // ============================================================
+    // Seven Segment Display (Constantine's)
+    // ============================================================
     sevenseg_sudoku SEVENSEG(
         .clk(clk),
         .engine_x(engine_x),

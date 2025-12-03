@@ -77,6 +77,7 @@ read_verilog -library xil_defaultlib -sv {
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv
+  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/letter_font.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/puzzle_rom.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv
   C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv
