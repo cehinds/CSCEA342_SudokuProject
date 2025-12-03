@@ -243,3 +243,60 @@ dismissDialog("Generate Bitstream"); // bk (Generate Bitstream Progress)
 selectButton(RDIResource.BaseDialog_OK, "OK", "Bitstream Generation Completed"); // f (RDIResource.BaseDialog_OK)
 // Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
 // Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,417 MB. GUI used memory: 85 MB. Current time: 12/3/25, 8:03:32 AM AKST
+// [Engine Memory]: 1,420 MB (+34092kb) [00:26:20]
+// [Engine Memory]: 1,496 MB (+5238kb) [00:26:21]
+// TclEventType: DESIGN_NEW
+// Xgd.load filename: C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/.Xil/Vivado-12912-C_Hinds_Surface/xc7a35t_detail.xgd_69CF elapsed time: 4.3s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 4.7s
+// [Engine Memory]: 1,740 MB (+177343kb) [00:26:25]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.1s
+// [Engine Memory]: 1,901 MB (+76865kb) [00:26:29]
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  4415 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35ticpg236-1L 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1999.812 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 562 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2025.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2092.496 ; gain = 0.000 
+// Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. INFO: [Designutils 20-5722] Start Reading Physical Databases. 
+// Tcl Message: Reading placement. 
+// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2571.148 ; gain = 0.000 
+// Tcl Message: Reading placer database... 
+// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2571.148 ; gain = 0.000 Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.292 . Memory (MB): peak = 2571.148 ; gain = 0.000 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2571.148 ; gain = 0.000 
+// Tcl Message: Reading routing. 
+// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.094 . Memory (MB): peak = 2571.148 ; gain = 0.000 Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.438 . Memory (MB): peak = 2571.148 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.442 . Memory (MB): peak = 2571.148 ; gain = 0.000 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2571.148 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 5 instances were transformed.   RAM128X1S => RAM128X1S (MUXF7, RAMS64E(x2)): 5 instances  
+// TclEventType: CURR_DESIGN_SET
+// [GUI Memory]: 180 MB (+17591kb) [00:26:30]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Device view-level: 0.0
+// ExpRunCommands.openImplResults elapsed time: 36.7s
+// TclEventType: DRC_ADDED
+// Tcl Message: open_run: Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 3035.676 ; gain = 1222.387 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// [GUI Memory]: 190 MB (+958kb) [00:26:33]
+// WARNING: HEventQueue.dispatchEvent() is taking  1467 ms.
+// TclEventType: TIMING_SUMMARY_UPDATED
+// WARNING: HEventQueue.dispatchEvent() is taking  1187 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/q.a': 40s
+// 'dX' command handler elapsed time: 41 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1120 ms.
+// Device view-level: 0.1
+// Device view-level: 0.0
+// Elapsed time: 42 seconds
+dismissDialog("Open Implemented Design"); // bk (Open Implemented Design Progress)
+// [GUI Memory]: 208 MB (+9042kb) [00:26:37]
+selectButton(PAResourceTtoZ.TouchpointSurveyDialog_REMIND_ME_LATER, "Remind me Later", "Feedback Request"); // f (PAResourceTtoZ.TouchpointSurveyDialog_REMIND_ME_LATER, PAResourceTtoZ.TouchpointSurveyDialog_CANCEL)
+dismissDialog("Feedback Request"); // aw (dialog6)
+selectButton(RDIResource.BaseDialog_OK, "OK", "Methodology Violations"); // f (RDIResource.BaseDialog_OK)
+dismissDialog("Methodology Violations"); // aI (dialog7)
