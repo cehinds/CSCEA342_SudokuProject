@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1/top.tcl"
+  variable script "C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,40 +56,38 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.cache/wt [current_project]
-set_property parent.project_path C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.xpr [current_project]
+set_property webtalk.parent_dir C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.cache/wt [current_project]
+set_property parent.project_path C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.cache/ip [current_project]
+set_property ip_output_repo c:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/letter_font.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/puzzle_rom.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/visual_output/sevenseg_sudoku.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/shadow_register.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sudoku_checker.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sudoku_gameplay.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/new/sudoku_loader.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv
-  C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/top.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/clock_divider.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/conditioner.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/digit_font.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/letter_font.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/puzzle_rom.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/ram.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sevenseg.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sevenseg_sudoku.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/shadow_register.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sudoku_checker.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sudoku_draw.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sudoku_engine.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sudoku_gameplay.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/sudoku_loader.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/vga_controller.sv
+  C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/sources_1/imports/sources/top.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -100,12 +98,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/constrs_1/imports/test_benches/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/constrs_1/imports/test_benches/Basys3_Master.xdc]
+read_xdc C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/constrs_1/imports/test_benches/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/constrs_1/imports/test_benches/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

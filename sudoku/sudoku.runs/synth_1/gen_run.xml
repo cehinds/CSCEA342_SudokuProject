@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764738894" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1764779996" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>
@@ -11,8 +11,153 @@
   <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/sources/clock_divider.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/clock_divider.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/conditioner.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/conditioner.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/digit_font.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/digit_font.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/letter_font.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/letter_font.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/puzzle_rom.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/puzzle_rom.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/ram.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/ram.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sevenseg.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sevenseg.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sevenseg_sudoku.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sevenseg_sudoku.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/shadow_register.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/shadow_register.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sudoku_checker.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sudoku_checker.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sudoku_draw.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sudoku_draw.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sudoku_engine.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sudoku_engine.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sudoku_gameplay.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sudoku_gameplay.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sudoku_loader.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sudoku_loader.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/vga_controller.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/vga_controller.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/top.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../top/clock_divider.sv"/>
         <Attr Name="ImportTime" Val="1764653726"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -22,6 +167,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/inputs_control/conditioner.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../inputs_control/conditioner.sv"/>
         <Attr Name="ImportTime" Val="1764571244"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -31,6 +177,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/digit_font.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/digit_font.sv"/>
         <Attr Name="ImportTime" Val="1764558994"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -40,6 +187,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/letter_font.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,6 +195,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/puzzle_rom.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -54,6 +203,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../game_logic_storage/ram.sv"/>
         <Attr Name="ImportTime" Val="1764570630"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -63,6 +213,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/sevenseg.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/sevenseg.sv"/>
         <Attr Name="ImportTime" Val="1764571372"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -72,6 +223,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/visual_output/sevenseg_sudoku.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/sevenseg_sudoku.sv"/>
         <Attr Name="ImportTime" Val="1764657656"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -81,6 +233,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/shadow_register.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -88,6 +241,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sudoku_checker.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -95,6 +249,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/sudoku_draw.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/sudoku_draw.sv"/>
         <Attr Name="ImportTime" Val="1764653836"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -104,6 +259,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/sudoku_engine.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../game_logic_storage/sudoku_engine.sv"/>
         <Attr Name="ImportTime" Val="1764653952"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -113,6 +269,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sudoku_gameplay.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -120,6 +277,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/sudoku_loader.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -127,6 +285,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../visual_output/vga_controller.sv"/>
         <Attr Name="ImportTime" Val="1764653824"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -136,6 +295,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/CSCEA342_SudokuProject/top/top.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../top/top.sv"/>
         <Attr Name="ImportTime" Val="1764653718"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -148,6 +308,16 @@
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../game_logic_storage/sudoku_games.sv"/>
         <Attr Name="ImportTime" Val="1764568236"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/sources/sudoku_games.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../sources/sudoku_games.sv"/>
+        <Attr Name="ImportTime" Val="1764778736"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
