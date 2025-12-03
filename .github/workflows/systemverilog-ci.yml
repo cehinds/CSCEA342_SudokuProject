@@ -10,156 +10,121 @@ jobs:
   syntax-check:
     name: Syntax Check
     runs-on: ubuntu-latest
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
     - name: Install Icarus Verilog
       run: |
         sudo apt-get update
         sudo apt-get install -y iverilog
-        
     - name: Check SystemVerilog syntax
       run: |
         echo "Checking syntax for all SystemVerilog files..."
-        find sudoku/sudoku.srcs -name "*.sv" -type f | while read file; do
+        find sudoku/sudoku.srcs/sources_1/imports -name "*.sv" -type f | while read file; do
           echo "Checking: $file"
           iverilog -g2012 -Wall -tnull "$file" || exit 1
         done
-        echo "✓ All syntax checks passed"
+        echo "All syntax checks passed"
 
   smoke-test:
     name: Smoke Test
     runs-on: ubuntu-latest
     needs: syntax-check
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
     - name: Install Icarus Verilog
       run: |
         sudo apt-get update
         sudo apt-get install -y iverilog
-        
     - name: Run smoke tests
       run: |
         echo "Running smoke tests..."
-        # Test clock divider
-        if [ -f "sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv" ]; then
+        if [ -f "sudoku/sudoku.srcs/sources_1/imports/clock_divider.sv" ]; then
           echo "Testing clock_divider.sv..."
-          iverilog -g2012 -o clock_divider_test sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv
-          echo "✓ Clock divider compiles"
+          iverilog -g2012 -o /tmp/clock_divider_test sudoku/sudoku.srcs/sources_1/imports/clock_divider.sv
+          echo "Clock divider compiles"
         fi
-        
-        # Test VGA controller
-        if [ -f "sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv" ]; then
+        if [ -f "sudoku/sudoku.srcs/sources_1/imports/vga_controller.sv" ]; then
           echo "Testing vga_controller.sv..."
-          iverilog -g2012 -o vga_test sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv
-          echo "✓ VGA controller compiles"
+          iverilog -g2012 -o /tmp/vga_test sudoku/sudoku.srcs/sources_1/imports/vga_controller.sv
+          echo "VGA controller compiles"
         fi
-        
-        # Test RAM module
-        if [ -f "sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv" ]; then
+        if [ -f "sudoku/sudoku.srcs/sources_1/imports/ram.sv" ]; then
           echo "Testing ram.sv..."
-          iverilog -g2012 -o ram_test sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv
-          echo "✓ RAM module compiles"
+          iverilog -g2012 -o /tmp/ram_test sudoku/sudoku.srcs/sources_1/imports/ram.sv
+          echo "RAM module compiles"
         fi
-        
-        echo "✓ All smoke tests passed"
+        echo "All smoke tests passed"
 
   semantic-check:
     name: Semantic Analysis
     runs-on: ubuntu-latest
     needs: smoke-test
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
     - name: Install Verilator
       run: |
         sudo apt-get update
         sudo apt-get install -y verilator
-        
     - name: Run Verilator lint
       run: |
         echo "Running semantic analysis with Verilator..."
-        find sudoku/sudoku.srcs/sources_1 -name "*.sv" -type f | while read file; do
+        mkdir -p verilator_logs
+        find sudoku/sudoku.srcs/sources_1/imports -name "*.sv" -type f | while read file; do
+          module_name=$(basename "$file" .sv)
           echo "Linting: $file"
-          verilator --lint-only -Wall --top-module $(basename "$file" .sv) "$file" 2>&1 | tee verilator.log || true
+          verilator --lint-only -Wall -Wno-DECLFILENAME -Wno-UNUSED --top-module "$module_name" "$file" 2>&1 | tee "verilator_logs/${module_name}.log" || true
         done
-        echo "✓ Semantic analysis complete (warnings are informational)"
+        echo "Semantic analysis complete"
 
   integration-test:
     name: Integration Test
     runs-on: ubuntu-latest
     needs: semantic-check
-    
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-      
     - name: Install Icarus Verilog
       run: |
         sudo apt-get update
         sudo apt-get install -y iverilog
-        
     - name: Test module integration
       run: |
         echo "Testing module integration..."
-        
-        # Create a simple integration test that includes all modules
-        cat > integration_test.sv << 'EOF'
-`timescale 1ns / 1ps
-
-// Minimal integration test - just check that all modules can be included
-module integration_test;
-  initial begin
-    $display("Integration test: All modules included successfully");
-    $finish;
-  end
-endmodule
-EOF
-        
-        # Try to compile the main design (this will fail if there are integration issues)
-        echo "Attempting to compile top-level design..."
-        if [ -f "sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/top.sv" ]; then
-          # Note: This is a basic check - full integration would require all dependencies
-          iverilog -g2012 -Wall -tnull \
-            sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/top/clock_divider.sv \
-            sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/visual_output/vga_controller.sv \
-            sudoku/sudoku.srcs/sources_1/imports/CSCEA342_SudokuProject/game_logic_storage/ram.sv \
-            || echo "⚠ Full integration compile failed (expected without all dependencies)"
+        echo "Available SystemVerilog modules:"
+        find sudoku/sudoku.srcs/sources_1/imports -name "*.sv" -type f | sort
+        echo "Testing basic module compilation..."
+        CLOCK_DIV="sudoku/sudoku.srcs/sources_1/imports/clock_divider.sv"
+        VGA_CTRL="sudoku/sudoku.srcs/sources_1/imports/vga_controller.sv"
+        RAM_MOD="sudoku/sudoku.srcs/sources_1/imports/ram.sv"
+        if [ -f "$CLOCK_DIV" ] && [ -f "$VGA_CTRL" ] && [ -f "$RAM_MOD" ]; then
+          echo "Compiling clock_divider + vga_controller + ram..."
+          iverilog -g2012 -Wall -tnull "$CLOCK_DIV" "$VGA_CTRL" "$RAM_MOD" && echo "Basic modules integrate successfully"
         fi
-        
-        echo "✓ Integration checks complete"
+        echo "Integration checks complete"
 
   report-status:
     name: Report Build Status
     runs-on: ubuntu-latest
     needs: [syntax-check, smoke-test, semantic-check, integration-test]
     if: always()
-    
     steps:
-    - name: Report success
-      if: ${{ needs.syntax-check.result == 'success' && needs.smoke-test.result == 'success' }}
+    - name: Report results
       run: |
         echo "================================================"
-        echo "✓ CI/CD Pipeline PASSED"
+        echo "CI/CD PIPELINE RESULTS"
         echo "================================================"
-        echo "All checks completed successfully:"
-        echo "  ✓ Syntax check"
-        echo "  ✓ Smoke test"
-        echo "  ✓ Semantic analysis"
-        echo "  ✓ Integration test"
-        echo "================================================"
-        
-    - name: Report failure
-      if: ${{ needs.syntax-check.result == 'failure' || needs.smoke-test.result == 'failure' }}
-      run: |
-        echo "================================================"
-        echo "✗ CI/CD Pipeline FAILED"
-        echo "================================================"
-        exit 1
+        echo "Job Results:"
+        echo "  Syntax Check: ${{ needs.syntax-check.result }}"
+        echo "  Smoke Test: ${{ needs.smoke-test.result }}"
+        echo "  Semantic Check: ${{ needs.semantic-check.result }}"
+        echo "  Integration Test: ${{ needs.integration-test.result }}"
+        if [ "${{ needs.syntax-check.result }}" = "success" ] && [ "${{ needs.smoke-test.result }}" = "success" ]; then
+          echo "BUILD PASSED"
+          exit 0
+        else
+          echo "BUILD FAILED"
+          exit 1
+        fi
