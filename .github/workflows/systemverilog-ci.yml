@@ -112,7 +112,7 @@ jobs:
         
         # Create a simple integration test that includes all modules
         cat > integration_test.sv << 'EOF'
-`timescale 1ns / 1ps
+
 
 // Minimal integration test - just check that all modules can be included
 module integration_test;
