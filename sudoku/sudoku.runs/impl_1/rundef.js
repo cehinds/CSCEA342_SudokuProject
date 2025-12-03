@@ -9,9 +9,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "H:/Constantine/Work/School/2025.1/Vitis/bin;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/bin/nt64;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/lib/nt64;H:/Constantine/Work/School/2025.1/Vivado/bin;";
+  PathVal = "C:/Constantine/school/tools/2025.1/Vitis/bin;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/bin/nt64;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/lib/nt64;C:/Constantine/school/tools/2025.1/Vivado/bin;";
 } else {
-  PathVal = "H:/Constantine/Work/School/2025.1/Vitis/bin;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/bin/nt64;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/lib/nt64;H:/Constantine/Work/School/2025.1/Vivado/bin;" + PathVal;
+  PathVal = "C:/Constantine/school/tools/2025.1/Vitis/bin;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/bin/nt64;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/lib/nt64;C:/Constantine/school/tools/2025.1/Vivado/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;

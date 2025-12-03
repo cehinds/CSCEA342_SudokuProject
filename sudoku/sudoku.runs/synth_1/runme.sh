@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=H:/Constantine/Work/School/2025.1/Vitis/bin;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/bin/nt64;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/lib/nt64:H:/Constantine/Work/School/2025.1/Vivado/bin
+  PATH=C:/Constantine/school/tools/2025.1/Vitis/bin;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/bin/nt64;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/lib/nt64:C:/Constantine/school/tools/2025.1/Vivado/bin
 else
-  PATH=H:/Constantine/Work/School/2025.1/Vitis/bin;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/bin/nt64;H:/Constantine/Work/School/2025.1/Vivado/ids_lite/ISE/lib/nt64:H:/Constantine/Work/School/2025.1/Vivado/bin:$PATH
+  PATH=C:/Constantine/school/tools/2025.1/Vitis/bin;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/bin/nt64;C:/Constantine/school/tools/2025.1/Vivado/ids_lite/ISE/lib/nt64:C:/Constantine/school/tools/2025.1/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1'
+HD_PWD='C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

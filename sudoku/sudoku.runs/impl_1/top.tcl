@@ -1,5 +1,5 @@
 namespace eval ::optrace {
-  variable script "C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/impl_1/top.tcl"
+  variable script "C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -104,24 +104,24 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 1
   set_param general.usePosixSpawnForFork 1
-  set_param runs.launchOptions { -jobs 4  }
+  set_param runs.launchOptions { -jobs 1  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35ticpg236-1L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.cache/wt [current_project]
-  set_property parent.project_path C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.xpr [current_project]
-  set_property ip_output_repo C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.cache/wt [current_project]
+  set_property parent.project_path C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.xpr [current_project]
+  set_property ip_output_repo C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1/top.dcp
+  add_files -quiet C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.runs/synth_1/top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku/sudoku.srcs/constrs_1/imports/test_benches/Basys3_Master.xdc
+  read_xdc C:/Constantine/programs/projects/CSCEA342_SudokuProject/sudoku/sudoku.srcs/constrs_1/imports/test_benches/Basys3_Master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }
