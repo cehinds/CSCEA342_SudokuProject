@@ -1,0 +1,180 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Wed Dec  3 07:44:36 2025
+| Host         : C_Hinds_Surface running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35ti
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   102 |
+|    Minimum number of control sets                        |   102 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   305 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   102 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    86 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             119 |           40 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              30 |           15 |
+| Yes          | No                    | No                     |             405 |          166 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             149 |           49 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------+-----------------------------------------------+--------------------------+------------------+----------------+--------------+
+|                  Clock Signal                 |                 Enable Signal                 |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------------------+-----------------------------------------------+--------------------------+------------------+----------------+--------------+
+|  DIV/Q[0]                                     |                                               |                          |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                                | ENGINE/LOADER/out8                            |                          |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                                | ENGINE/LOADER/FSM_onehot_state[3]_i_1_n_0     | soft_reset               |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                                | cU/E[0]                                       | soft_reset               |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_x_reg                  | soft_reset               |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg                  | soft_reset               |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_7[0]      |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_45[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_40[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_57[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_63[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_44[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_53[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_9[0]  |                          |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_59[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_9[0]      |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/FSM_onehot_state_reg_n_0_[1]           | soft_reset               |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_27[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_28[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_29[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_21[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_3[0]  |                          |                5 |              5 |         1.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_30[0] |                          |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_31[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_32[0] |                          |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[0]_0[0]  |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[0]_2[0]  |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_11[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/E[0]                          |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_0[0]  |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_12[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_13[0] |                          |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_16[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_18[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_20[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_22[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_24[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[0]_1[0]  |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_25[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[0][0]    |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_14[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_1[0]  |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_19[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_10[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_26[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1][0]    |                          |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_15[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_17[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_2[0]  |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_23[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_8[0]  |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_0[0]      |                          |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_1[0]      |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_8[0]      |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_54[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_43[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_35[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_37[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_41[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_46[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_50[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_10[0]     |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_39[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_48[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_6[0]  |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_42[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_52[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_7[0]  |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_38[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_47[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_55[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_4[0]  |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_62[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_36[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_3[0]      |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_4[0]      |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_5[0]      |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_56[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_2[0]      |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_34[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_5[0]  |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_58[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_60[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_51[0] |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_49[0] |                          |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_61[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/cursor_y_reg_reg[0]_6[0]      |                          |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/FSM_onehot_state_reg[1]_33[0] |                          |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG                                | ENGINE/LOADER/counter                         | soft_reset               |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG                                | ENGINE/CHECKER/counter[6]_i_1__0_n_0          | soft_reset               |                2 |              7 |         3.50 |
+|  VGA/E[0]                                     |                                               |                          |                5 |              8 |         1.60 |
+|  ENGINE/SHADOW_REG/vgaRed_OBUF[0]_inst_i_2[0] |                                               |                          |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG                                | ENGINE/GAMEPLAY/grid_we                       |                          |                2 |              8 |         4.00 |
+|  DIV/Q[0]                                     | VGA/v_count_0                                 | VGA/v_count[9]_i_1_n_0   |                4 |              9 |         2.25 |
+|  DIV/Q[0]                                     |                                               | VGA/v_count_0            |                6 |             11 |         1.83 |
+|  clk_IBUF_BUFG                                |                                               | soft_reset               |                9 |             19 |         2.11 |
+|  clk_IBUF_BUFG                                | cC/counter[0]_i_2_n_0                         | cC/counter[0]_i_1__1_n_0 |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                                | cD/counter[0]_i_2__1_n_0                      | cD/counter[0]_i_1__3_n_0 |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                                | cL/counter[0]_i_2__2_n_0                      | cL/counter[0]_i_1__4_n_0 |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                                | cR/counter[0]_i_2__3_n_0                      | cR/counter[0]_i_1__5_n_0 |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                                | cU/counter[0]_i_2__0_n_0                      | cU/counter[0]_i_1__2_n_0 |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                                |                                               |                          |               30 |            101 |         3.37 |
++-----------------------------------------------+-----------------------------------------------+--------------------------+------------------+----------------+--------------+
+
+
