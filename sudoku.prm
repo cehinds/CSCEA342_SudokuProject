@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               4M
+Start Address      0x00000000
+End Address        0x003FFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0021728B    Dec  3 21:00:32 2025    C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku_1_0_0/sudoku_1_0_0.runs/impl_1/top.bit

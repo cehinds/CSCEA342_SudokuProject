@@ -146,7 +146,7 @@ module top(
 
             // Toggle modes
             if (btnC_edge) begin
-                if (mode == MODE_MOVE) begin
+                if (mode == MODE_MOVE && !fixed_mask_out[engine_y][engine_x]) begin
                     mode <= MODE_NUMBER;
                     selected_number <= (engine_val != 0) ? engine_val : 4'd1;
                 end
@@ -154,12 +154,13 @@ module top(
                     mode <= MODE_MOVE;
                 end
             end
-            else if (mode == MODE_NUMBER) begin
+            
+            else if (mode == MODE_NUMBER && !fixed_mask_out[engine_y][engine_x]) begin
                 if (btnU_edge)
                     selected_number <= (selected_number == 9) ? 1 : selected_number + 1;
                 else if (btnD_edge)
                     selected_number <= (selected_number == 1) ? 9 : selected_number - 1;
-            end
+            end       
         end
     end
 
@@ -183,8 +184,13 @@ module top(
         cmd_right = (mode == MODE_MOVE) ? btnR_edge : 1'b0;
 
         if (mode == MODE_NUMBER) begin
-            cmd_number = selected_number;
-            cmd_valid  = btnC_edge;
+            if (!fixed_mask_out[engine_y][engine_x]) begin
+                cmd_number = selected_number;
+                cmd_valid  = btnC_edge;
+            end else begin
+                cmd_number = 0;
+                cmd_valid  = 0;
+            end
         end
         else begin
             cmd_number = 4'd0;

@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+WARNING: Too many words specified in data file SudokuEngine.tv
+----------------------------------------------
+SUCCESS: All 175 vectors passed!
+----------------------------------------------
+$finish called at time : 1746 ns : File "C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku_1_0_0/sudoku_1_0_0.srcs/sim_1/imports/feature-vga_ram_sevenseg_integration/TestbenchSudokuEngine.sv" Line 143

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TestbenchSudokuEngine_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TestbenchSudokuEngine" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="3,174.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,746.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="129"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="42" />
+   <wvobject fp_name="/TestbenchSudokuEngine/l_SEL" type="logic">
+      <obj_property name="ElementShortName">l_SEL</obj_property>
+      <obj_property name="ObjectShortName">l_SEL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_VALID" type="logic">
+      <obj_property name="ElementShortName">l_VALID</obj_property>
+      <obj_property name="ObjectShortName">l_VALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_UP" type="logic">
+      <obj_property name="ElementShortName">l_UP</obj_property>
+      <obj_property name="ObjectShortName">l_UP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_DOWN" type="logic">
+      <obj_property name="ElementShortName">l_DOWN</obj_property>
+      <obj_property name="ObjectShortName">l_DOWN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_LEFT" type="logic">
+      <obj_property name="ElementShortName">l_LEFT</obj_property>
+      <obj_property name="ObjectShortName">l_LEFT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_RIGHT" type="logic">
+      <obj_property name="ElementShortName">l_RIGHT</obj_property>
+      <obj_property name="ObjectShortName">l_RIGHT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_ENTER" type="logic">
+      <obj_property name="ElementShortName">l_ENTER</obj_property>
+      <obj_property name="ObjectShortName">l_ENTER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_READY" type="logic">
+      <obj_property name="ElementShortName">l_READY</obj_property>
+      <obj_property name="ObjectShortName">l_READY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_WON" type="logic">
+      <obj_property name="ElementShortName">l_WON</obj_property>
+      <obj_property name="ObjectShortName">l_WON</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_LOST" type="logic">
+      <obj_property name="ElementShortName">l_LOST</obj_property>
+      <obj_property name="ObjectShortName">l_LOST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_READY_EXP" type="logic">
+      <obj_property name="ElementShortName">l_READY_EXP</obj_property>
+      <obj_property name="ObjectShortName">l_READY_EXP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_WON_EXP" type="logic">
+      <obj_property name="ElementShortName">l_WON_EXP</obj_property>
+      <obj_property name="ObjectShortName">l_WON_EXP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_LOST_EXP" type="logic">
+      <obj_property name="ElementShortName">l_LOST_EXP</obj_property>
+      <obj_property name="ObjectShortName">l_LOST_EXP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_CUR_X_EXP" type="array">
+      <obj_property name="ElementShortName">l_CUR_X_EXP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">l_CUR_X_EXP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_CUR_Y_EXP" type="array">
+      <obj_property name="ElementShortName">l_CUR_Y_EXP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">l_CUR_Y_EXP[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_CUR_X" type="array">
+      <obj_property name="ElementShortName">l_CUR_X[3:0]</obj_property>
+      <obj_property name="ObjectShortName">l_CUR_X[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_CUR_Y" type="array">
+      <obj_property name="ElementShortName">l_CUR_Y[3:0]</obj_property>
+      <obj_property name="ObjectShortName">l_CUR_Y[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/vectornum" type="array">
+      <obj_property name="ElementShortName">vectornum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/testvectors" type="array">
+      <obj_property name="ElementShortName">testvectors[0:174][14:0]</obj_property>
+      <obj_property name="ObjectShortName">testvectors[0:174][14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_VAL" type="array">
+      <obj_property name="ElementShortName">l_VAL[3:0]</obj_property>
+      <obj_property name="ObjectShortName">l_VAL[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_CHKW" type="logic">
+      <obj_property name="ElementShortName">l_CHKW</obj_property>
+      <obj_property name="ObjectShortName">l_CHKW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_CHKL" type="logic">
+      <obj_property name="ElementShortName">l_CHKL</obj_property>
+      <obj_property name="ObjectShortName">l_CHKL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_MATCH" type="array">
+      <obj_property name="ElementShortName">l_MATCH[0:8][0:8]</obj_property>
+      <obj_property name="ObjectShortName">l_MATCH[0:8][0:8]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_GRID" type="array">
+      <obj_property name="ElementShortName">l_GRID[0:8][0:8][3:0]</obj_property>
+      <obj_property name="ObjectShortName">l_GRID[0:8][0:8][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/l_FIXED" type="array">
+      <obj_property name="ElementShortName">l_FIXED[0:8][0:8]</obj_property>
+      <obj_property name="ObjectShortName">l_FIXED[0:8][0:8]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_state" type="array">
+      <obj_property name="ElementShortName">dbg_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_load_counter" type="array">
+      <obj_property name="ElementShortName">dbg_load_counter[6:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_load_counter[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_load_row" type="array">
+      <obj_property name="ElementShortName">dbg_load_row[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_load_row[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_load_col" type="array">
+      <obj_property name="ElementShortName">dbg_load_col[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_load_col[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_up_evt" type="logic">
+      <obj_property name="ElementShortName">dbg_up_evt</obj_property>
+      <obj_property name="ObjectShortName">dbg_up_evt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_down_evt" type="logic">
+      <obj_property name="ElementShortName">dbg_down_evt</obj_property>
+      <obj_property name="ObjectShortName">dbg_down_evt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_left_evt" type="logic">
+      <obj_property name="ElementShortName">dbg_left_evt</obj_property>
+      <obj_property name="ObjectShortName">dbg_left_evt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_right_evt" type="logic">
+      <obj_property name="ElementShortName">dbg_right_evt</obj_property>
+      <obj_property name="ObjectShortName">dbg_right_evt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_enter_evt" type="logic">
+      <obj_property name="ElementShortName">dbg_enter_evt</obj_property>
+      <obj_property name="ObjectShortName">dbg_enter_evt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_current_x" type="array">
+      <obj_property name="ElementShortName">dbg_current_x[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_current_x[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_current_y" type="array">
+      <obj_property name="ElementShortName">dbg_current_y[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_current_y[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_current_val" type="array">
+      <obj_property name="ElementShortName">dbg_current_val[3:0]</obj_property>
+      <obj_property name="ObjectShortName">dbg_current_val[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_engine_ready" type="logic">
+      <obj_property name="ElementShortName">dbg_engine_ready</obj_property>
+      <obj_property name="ObjectShortName">dbg_engine_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_game_won" type="logic">
+      <obj_property name="ElementShortName">dbg_game_won</obj_property>
+      <obj_property name="ObjectShortName">dbg_game_won</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/dbg_game_lost" type="logic">
+      <obj_property name="ElementShortName">dbg_game_lost</obj_property>
+      <obj_property name="ObjectShortName">dbg_game_lost</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestbenchSudokuEngine/NUM_VECTORS" type="array">
+      <obj_property name="ElementShortName">NUM_VECTORS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_VECTORS[31:0]</obj_property>
+   </wvobject>
+</wave_config>

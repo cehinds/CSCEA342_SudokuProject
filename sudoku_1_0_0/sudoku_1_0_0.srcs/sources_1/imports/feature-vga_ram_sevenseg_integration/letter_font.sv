@@ -1,5 +1,5 @@
 //============================================================
-// 8×12 FONT FOR LETTERS USED IN GAME LABELS
+// 8×12 Font letters
 // Supports only the letters we actually need.
 //============================================================
 
@@ -20,17 +20,17 @@ module letter_font(
     localparam CH_T = 6'd8;
     localparam CH_S = 6'd9;
     localparam CH_W = 6'd10;
-    localparam CH_LP = 6'd11;   // '('
-    localparam CH_RP = 6'd12;   // ')'
+    localparam CH_I = 6'd16;
+    localparam CH_N = 6'd17;
+    localparam CH_R = 6'd18;
+    localparam CH_O = 6'd19;
 
     always_comb begin
         bits = 8'h00;
 
         unique case (ch)
 
-        // --------------------
         // Letter G
-        // --------------------
         CH_G: begin
             case (row)
                 0: bits = 8'b00111100;
@@ -154,9 +154,56 @@ module letter_font(
                 default: bits = 8'b00000000;
             endcase
         end
-        // --------------------
+        
+        // Letter I
+        CH_I: begin
+            case (row)
+                0: bits = 8'b01111110;
+                1: bits = 8'b00011000;
+                2: bits = 8'b00011000;
+                3: bits = 8'b00011000;
+                4: bits = 8'b01111110;
+                default: bits = 8'b00000000;
+            endcase
+        end
+        
+        // Letter N
+        CH_N: begin
+            case (row)
+                0: bits = 8'b11000011;
+                1: bits = 8'b11100011;
+                2: bits = 8'b11010011;
+                3: bits = 8'b11001111;
+                4: bits = 8'b11000111;
+                default: bits = 8'b00000000;
+            endcase
+        end
+        
+        // Letter R
+        CH_R: begin
+            case (row)
+                0: bits = 8'b11111100;
+                1: bits = 8'b11000110;
+                2: bits = 8'b11111100;
+                3: bits = 8'b11011000;
+                4: bits = 8'b11001100;
+                default: bits = 8'b00000000;
+            endcase
+        end
+        
+        // Letter O
+        CH_O: begin
+            case (row)
+                0: bits = 8'b00111100;
+                1: bits = 8'b01100110;
+                2: bits = 8'b01100110;
+                3: bits = 8'b01100110;
+                4: bits = 8'b00111100;
+                default: bits = 8'b00000000;
+            endcase
+        end
+
         // Digit 0
-        // --------------------
         6'd13: begin  // CH_0
             case (row)
                 0: bits = 8'b00111100;
@@ -211,13 +258,7 @@ module letter_font(
                 default: bits = 8'b00000000;
             endcase
         end
-
-        // '('
-        CH_LP: bits = 8'b00111100;
-
-        // ')'
-        CH_RP: bits = 8'b00111100;
-
+        
         default: bits = 8'h00;
 
         endcase

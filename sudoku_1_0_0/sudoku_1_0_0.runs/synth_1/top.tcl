@@ -56,7 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param general.usePosixSpawnForFork 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
 
@@ -97,6 +99,8 @@ read_xdc C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku_1_0_0/sudo
 set_property used_in_implementation false [get_files C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku_1_0_0/sudoku_1_0_0.srcs/constrs_1/imports/feature-vga_ram_sevenseg_integration/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/suprbludude/Downloads/CSCEA342_SudokuProject/sudoku_1_0_0/sudoku_1_0_0.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
